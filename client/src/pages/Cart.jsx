@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar"
 import StripeCheckout from 'react-stripe-checkout'
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 
 
 const KEY="pk_test_51KTtbLC2NhwnuTjeksB1jw76WLjALHaxU9vSumyGEObJK8rUgfdlJf3TgEAqoTX8LKjuIDkqhDM9pA287VQd81Nh00l46H7J8F"
@@ -173,7 +173,9 @@ const Cart = () => {
             <Wrapper>
                 <Title>YOUR BAG</Title>
                 <Top>
-                    <TopButton>CONTINUE SHOPPING</TopButton>
+                    <Link to="/">
+                        <TopButton>CONTINUE SHOPPING</TopButton>
+                    </Link>
                     <TopTexts>
                         <TopText>Shopping Bag (2)</TopText>
                         <TopText>Your Wichlist (0)</TopText>

@@ -30,7 +30,7 @@ const App = () => {
 					<Success />
 				</Route>
 				<Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
-				<Route path="/register">{user ? <Redirect to="/" /> : <Register />}</Route>
+				<Route path="/register">{user === 'null' ? <Redirect to="/" /> : <Register />}</Route>
 			</Switch>
 		</Router>
 	);
